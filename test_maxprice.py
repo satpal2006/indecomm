@@ -7,13 +7,13 @@ class TestStock(unittest.TestCase):
 
     def test_max_price(self):
         stock = maxprice.Stock();
-        data = stock.getMaxPrice('test_shares_data.csv')
+        data = stock.getMaxPrice(None)
         #check the length of data equals to length of company
         self.assertEqual(data.__len__(), 5)
 
     def test_max_price_valid_data(self):
         stock = maxprice.Stock();
-        data = stock.getMaxPrice('test_shares_data.csv')
+        data = stock.getMaxPrice(None)
         #check the name of first company equals to Company-A
         self.assertEqual(data[0][0], 'Company-A')
         #check max stock value of Company-A is 1000
