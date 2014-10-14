@@ -6,8 +6,11 @@ import csv, sys
 class Stock:
     def __init__(self):
         self.formatter = None;
-
     def getMaxPrice(self, name):
+        '''
+        method will help in parsing the csv file and get the max price of share with date.
+        @name csv file location with name to be parsed.
+        '''
         if name == None:
             name = raw_input("Please provide csv file location : ")
             with open(name, 'rb') as csvfile:
